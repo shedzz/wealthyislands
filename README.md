@@ -1,0 +1,2 @@
+# wealthyislands
+blog
