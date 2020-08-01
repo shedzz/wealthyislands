@@ -1,0 +1,272 @@
+@font-face{
+    src: url("../font/BillionDreams_PERSONAL.ttf");
+    font-family: "Billion";
+}
+@font-face{
+    src: url("../font/Photographs.ttf");
+    font-family: "photo";
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    padding: 0;
+    min-height: 100vh;
+}
+h1,h6, p{
+    text-align: center;
+}
+p{
+    font-family: sans-serif;
+}
+body{
+    display: grid;
+    grid-template-columns: minmax(100px,1000px);
+    grid-template-areas: 
+    "header"
+    "main"
+    "main1"
+    "main2"
+    "footer";
+}
+header{
+    grid-area: header;
+    position: relative;
+    height: 250px;
+    border-bottom: 2px solid black;
+}
+.bg{/*responsive background-image*/
+    background-image: url("../image/IMG_1787.JPG");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    opacity: 0.5;
+    position: relative;
+}
+/*    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+header::before {
+    ONE WAY OF MAKING A BG IMG TRANSPARENT SO THAT THE TEXT CAN BE MORE READABLE
+    position: absolute;
+    content: "";
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-image: url("../image/IMG_1787.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 250px;
+    opacity: 0.45;
+  }
+/*.header::after{
+    content: "";
+    background-image: url("../image/IMG_1787.JPG");    
+    height: 300px;
+    width: 300px;
+    display: block;
+}*/
+.main__header{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-family: "Billion";
+    font-size: 3.1875rem;
+    margin-top: 0;
+    color: white; 
+}
+nav{
+    position: absolute;
+    top: 60%;
+    left: 17%;
+}
+
+.navbar,ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; align-items: center;
+    
+}
+.btn1, .btn2{
+    border-radius: 25px;
+    border: 2px solid white;
+    background-blend-mode: overlay;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 3px;
+    box-shadow: 1px 2px 1px 0px;
+}
+
+li>a:hover{
+    background-color: gainsboro;
+    border-radius: 60px;
+}
+
+
+.btn2{
+    margin-left: 15%;
+}
+.btn1{
+    margin-right: 15%;
+}
+ul, li, a{
+    list-style-type: none;
+    text-decoration: none;    
+    color: white;
+    
+}
+
+.main{
+    grid-area: main;
+    height: 550px;
+    position: relative;
+}
+
+.main__header2{
+    font-family: "photo";
+}
+.calendar{
+    position: absolute;
+    left: 40%;
+    top: 20px;
+    font-size: 8px;
+}
+.main__para1{
+    padding: 0 1em 0 1em;
+}
+.main::after{
+    content: "";
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    position: absolute;
+    bottom: 10px;
+    left: 8px;
+    height: 200px;
+    width: 50px;
+}
+.main::before{
+    content: "";
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+    position: absolute;
+    top: 35px;
+    right: 8px;
+    height: 200px;
+    width: 50px;
+}
+@media (max-width:320px){
+    .main{
+        height: 630px;
+    }
+
+    .main::before{
+        top: 55px;
+    }
+}
+
+.main1{
+    grid-area: main1;
+}
+.main2{
+    grid-area:main2;
+    background-color:rgba(128, 128, 128, 0.404);
+    padding-bottom: 30px;
+}
+.main2__header{
+    font-family: "photo";
+}/*
+.main2__para::before{
+    font-family: "Font Awesome";
+    content: "\f0e0";
+
+}*/
+footer{
+    grid-area: footer;
+    background-color:rgba(128, 128, 128, 0.582);
+    padding: 10px;
+    margin: 0;
+    border-top: 3px solid black;
+}
+h6{
+    margin-bottom: 0;
+}
+
+
+/*ABOUT PAGE STYLES*/
+.main1__aboutHeader{
+    font-family: "photo";
+    font-size: 2.5rem;
+
+}
+.main1__aboutPara{
+    padding: 1.2em;
+}
+.main1__aboutPic{
+    background-image: url("../image/IMG_1813.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid black;
+    border-radius: 20px;
+    height: 280px;
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+@media (min-width:420px){
+    .main{
+        height: 470px;
+        
+    }
+   
+
+}
+@media (min-width:700px){
+    .main{
+        height: 310px;
+        
+    }
+    .main1__aboutHeader{
+        margin-top: 30px;
+        margin-bottom: 5px;
+    
+    }
+    .main1__aboutPara{
+        padding: 0;
+    }
+    .main1__aboutPic{
+        height: 240px;
+        width: 200px;
+        margin-top: 0;
+    }
+    .main2{
+        margin-top: 100px;
+        
+    }
+}
+
+@media (min-width:1000px){
+
+    body{
+        display: grid;
+        grid-template-columns: 20% minmax(100px,1000px) 20%;
+        grid-template-areas: 
+        "..... header ....."
+        "..... main ..... "
+        "..... main1 ..... "
+        "..... main2 ....."
+        "..... footer .....";
+    }
+
+}
