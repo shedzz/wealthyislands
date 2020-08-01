@@ -176,6 +176,9 @@ ul, li, a{
     }
 }
 
+.main1{
+    grid-area: main1;
+}
 .main2{
     grid-area:main2;
     background-color:rgba(128, 128, 128, 0.404);
@@ -261,6 +264,7 @@ h6{
         grid-template-areas: 
         "..... header ....."
         "..... main ..... "
+        "..... main1 ..... "
         "..... main2 ....."
         "..... footer .....";
     }
