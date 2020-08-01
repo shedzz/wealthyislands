@@ -177,7 +177,8 @@ ul, li, a{
 }
 
 .main1{
-    grid-area: main1;
+    grid-area: main1;    
+    border-top: 2px solid black;
 }
 .main2{
     grid-area:main2;
